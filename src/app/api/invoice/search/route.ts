@@ -1,7 +1,5 @@
 import {NextResponse} from 'next/server';
-import {PrismaClient} from '@prisma/client';
-
-const prisma = new PrismaClient();
+import { prisma } from '@/lib/prisma';
 
 // GET 요청 - 특정 Client의 Invoice 리스트 조회 (InvoiceDetail 가격 합계 포함)
 export async function GET(req: Request) {

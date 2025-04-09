@@ -1,7 +1,5 @@
 import {NextResponse} from 'next/server';
-import {PrismaClient} from '@prisma/client';
-
-const prisma = new PrismaClient();
+import { prisma } from '@/lib/prisma';
 
 // POST 요청 - Invoice 및 InvoiceDetail을 함께 등록
 export async function POST(req: Request) {
